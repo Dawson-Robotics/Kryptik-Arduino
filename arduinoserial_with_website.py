@@ -31,9 +31,15 @@ keyboard.release(Key.f11)
 videoplaying = False
 while True:
     inp = main()
-    print(inp)
-
     '''input from the arduino goes from 0 to 3 which corresponds to a video or no video'''
+    # the destruct!
+    if (inp == '10'):
+        os.startfile("C:\\Users\\tinhr\\OneDrive\\Images\\Projets vidéo\\QVEY8403.MOV")
+        time.sleep(10)
+        window = gw.getWindowsWithTitle('Lecteur multimédia VLC')[0]
+        window.close()
+
+
     if (inp == '1') and videoplaying == False:
         os.startfile("C:\\Users\\tinhr\\OneDrive\\Images\\Projets vidéo\\ALERTE_ROUGE.mp4")
         time.sleep(2)
